@@ -1,12 +1,13 @@
-xinput calibrator: A generic touchscreen calibration program for X.Org
+# xinput calibrator: A generic touchscreen calibration program for X.Org
 
 Version: 0.7.5
 Website: http://www.freedesktop.org/wiki/Software/xinput_calibrator
 Source:  http://github.com/tias/xinput_calibrator
 Bugs:    http://github.com/tias/xinput_calibrator/issues
 
-Raspberry Pi configuration:
+## Raspberry Pi configuration:
 -------------------
+```
 #Edit /boot/config.txt, add or modify the following entries:
 hdmi_force_hotplug=1
 hdmi_group=2
@@ -15,9 +16,11 @@ hdmi_cvt 800 480 60 6 0 0 0
 dtparam=spi=on
 #device_tree=bcm2710-rpi-3-b.dtb #This must be fit for your Pi model.
 dtoverlay=ads7846,penirq=22,speed=100000,xohms=150
+```
 
-Build instructions:
+## Build instructions:
 -------------------
+```
 ./autogen.sh
     Sets up build environment, run ./autogen.sh --help to see the build options
     Notable build options:
@@ -25,32 +28,42 @@ Build instructions:
     --with-gui=x11          Use native x11 GUI
 make
     Builds the software with the configured GUI
+```
 
-Usage:
+## Usage:
 ------
+```
 Simply run:
     xinput_calibrator
+```
 
 __________________________________
 # Full process in Raspbian
 __________________________________
-Requeriments:
+## Requeriments:
 -------------------
+```
 sudo apt-get -y install xinput libx11-dev libxext-dev x11proto-input-dev evtest dh-autoreconf libts-bin libxi-dev
+```
 
-Clone & Build:
+## Clone & Build:
 -------------------
+```
 cd ~ #go back to your own home directory
 git clone https://github.com/prusavfc/xinput_calibrator
 cd ~/xinput_calibrator
 ./autogen.sh && make && sudo make install
+```
 
-Execute calibration
+## Execute calibration
 ------
+```
 DISPLAY=:0.0 xinput_calibrator
+```
 
-Install drivers from here
+## Install drivers from here
 ------
+```
 https://www.waveshare.com/wiki/5inch_HDMI_LCD
 cd ~ #go back to your own home directory
 wget https://www.waveshare.com/w/upload/1/1e/LCD-show-180817.tar.gz
@@ -58,13 +71,14 @@ tar xzvf LCD-show-180817.tar.gz
 cd LCD-show/
 chmod +x LCD5-show
 ./LCD5-show
-__________________________________
+```
+_________________________________
 
 For more information, run with --help or check the manpage.
 The scripts/ directory constains scripts to get calibration from hal or use a pointercal file to reapply xinput commands across reboots
 
 
-More about the project:
+## More about the project:
 -----------------------
 Because all existing calibrators were driver dependent and hard to use, xinput_calibrator was created. The goal of xinput_calibrator is to: 
 * work for any Xorg driver (use Xinput to get axis valuators), 
