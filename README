@@ -47,6 +47,16 @@ cd ~/xinput_calibrator
 Execute calibration
 ------
 DISPLAY=:0.0 xinput_calibrator
+
+Install drivers from here
+------
+https://www.waveshare.com/wiki/5inch_HDMI_LCD
+cd ~ #go back to your own home directory
+wget https://www.waveshare.com/w/upload/1/1e/LCD-show-180817.tar.gz
+tar xzvf LCD-show-180817.tar.gz
+cd LCD-show/
+chmod +x LCD5-show
+./LCD5-show
 __________________________________
 
 For more information, run with --help or check the manpage.
