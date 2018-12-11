@@ -64,7 +64,13 @@ DISPLAY=:0.0 xinput_calibrator
 ## Install drivers from here
 ------
 ```
-https://www.waveshare.com/wiki/5inch_HDMI_LCD
+- LCD5-show is for LCD 5" 800x480 GPIO/HDMI (MPI5008)
+- https://wiki.52pi.com/index.php?title=5-Inch-800x480-HDMI-GPIO-Touch-Screen_SKU:EP-0072
+
+- Other LCD´s
+https://wiki.52pi.com/index.php#Displays
+
+- https://www.waveshare.com/wiki/5inch_HDMI_LCD
 cd ~ #go back to your own home directory
 wget https://www.waveshare.com/w/upload/1/1e/LCD-show-180817.tar.gz
 tar xzvf LCD-show-180817.tar.gz
