@@ -1,9 +1,9 @@
 # xinput calibrator: A generic touchscreen calibration program for X.Org
 
-Version: 0.7.5
-Website: http://www.freedesktop.org/wiki/Software/xinput_calibrator
-Source:  http://github.com/tias/xinput_calibrator
-Bugs:    http://github.com/tias/xinput_calibrator/issues
+* Version: 0.7.5
+* Website: http://www.freedesktop.org/wiki/Software/xinput_calibrator
+* Source:  http://github.com/tias/xinput_calibrator
+* Bugs:    http://github.com/tias/xinput_calibrator/issues
 
 ## Raspberry Pi configuration:
 -------------------
