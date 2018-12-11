@@ -16,10 +16,6 @@ dtparam=spi=on
 #device_tree=bcm2710-rpi-3-b.dtb #This must be fit for your Pi model.
 dtoverlay=ads7846,penirq=22,speed=100000,xohms=150
 
-Requeriments:
--------------------
-sudo apt-get -y install xinput libx11-dev libxext-dev x11proto-input-dev evtest dh-autoreconf libts-bin libxi-dev
-
 Build instructions:
 -------------------
 ./autogen.sh
@@ -30,6 +26,17 @@ Build instructions:
 make
     Builds the software with the configured GUI
 
+Usage:
+------
+Simply run:
+    xinput_calibrator
+
+# Full process in Raspbian
+__________________________________
+Requeriments:
+-------------------
+sudo apt-get -y install xinput libx11-dev libxext-dev x11proto-input-dev evtest dh-autoreconf libts-bin libxi-dev
+
 Clone & Build:
 -------------------
 cd ~ #go back to your own home directory
@@ -37,10 +44,10 @@ git clone https://github.com/prusavfc/xinput_calibrator
 cd ~/xinput_calibrator
 ./autogen.sh && make && sudo make install
 
-Usage:
+Execute calibration
 ------
-Simply run:
-    xinput_calibrator
+DISPLAY=:0.0 xinput_calibrator
+__________________________________
 
 For more information, run with --help or check the manpage.
 The scripts/ directory constains scripts to get calibration from hal or use a pointercal file to reapply xinput commands across reboots
