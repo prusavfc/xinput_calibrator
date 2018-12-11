@@ -31,6 +31,7 @@ Usage:
 Simply run:
     xinput_calibrator
 
+__________________________________
 # Full process in Raspbian
 __________________________________
 Requeriments:
